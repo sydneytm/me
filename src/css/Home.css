@@ -1,0 +1,18 @@
+h1 {
+    height: 20vh;
+    width: 250px;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    /* background-color: hotpink; */
+    color: white;
+  }
+
+
+  .home{
+    color: hotpink
+  }
+  .plus{
+    height: 300px;
+    color: blue
+  }

@@ -1,0 +1,102 @@
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 1rem; */
+  text-decoration-color: aqua;
+  /* color: blue */
+  /* text-align: center; */
+  margin-top: 0;
+  padding-left:7%;
+}
+header {
+  color: pink;
+  /* text-align: center; */
+  align-items: center;
+  padding-left:10%;
+  margin-top: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:x-large
+  
+}
+body {
+  background-color: pink;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.dog-image {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.super-dog {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.nonSpinLogo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.nonSpinLogo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.nonSpinLogo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform:translateX(0px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin 10s forwards ease-in-out infinite ;
+  }
+}
+
+@keyframes slide-in-out {
+  0% {
+    transform: translateX(-124%); /* Start off-screen to the left */
+  }
+  50% {
+    transform: translateX(0); /* Center of the screen */
+  }
+  100% {
+    transform: translateX(1000%); /* Exit off-screen to the right */
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .super-dog {
+    animation: slide-in-out 10s forwards ease-in-out; /* 5 seconds for the full animation */
+  }
+}
+
+/* .card {
+  padding: 2em;
+} */
+
+/* .read-the-docs {
+  color: #888;
+} */
