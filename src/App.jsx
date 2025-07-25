@@ -1,10 +1,17 @@
 import * as React from 'react'
 import './css/App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
 import Navigation from './components/Navigation';
 import { Home } from './screens/Home.jsx';
 import { DogTown } from './screens/dogTown.jsx';
 import { Math } from './screens/Math/Math.jsx';
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+// import {
+//   createHashRouter,
+//   RouterProvider
+// } from 'react-router-dom';
 function App() {
   return (
     <Router basename="/me">
@@ -18,6 +25,8 @@ function App() {
       </Routes>
     </div>
   </Router>
+
+  
   )
 }
 
