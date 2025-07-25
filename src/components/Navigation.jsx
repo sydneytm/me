@@ -8,7 +8,7 @@ const Navigation = () => {
     <div className="sidebar">
       <h2>Navigation</h2>
       <ul>
-        <li onClick={() => navigate('/home')}>Home</li>
+        <li onClick={() => navigate('')}>Home</li>
         <li onClick={() => navigate('/dogtown')}>Dog Town</li>
         {/* <li onClick={() => navigate('/services')}>Services</li> */}
         <li onClick={() => navigate('/math')}>Math</li>
@@ -18,4 +18,6 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+
 
