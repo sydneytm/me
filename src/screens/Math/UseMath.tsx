@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export interface UseMath {
-    // square: number[];
+    square:  number[];
     horizontal: (square: number[]) => number[];
     vertical: (square: number[]) => number[];
     diagonal: (square: number[]) => number[];
@@ -10,70 +10,137 @@ export interface UseMath {
     one80: (square: number[]) => number[];
     two70: (square: number[]) => number[];
     squaresMatch: (square1: number[], square2: number[]) => boolean;
+    flippedVertical: boolean;
+    flippedHorizontal: boolean;
+    flippedDiagonal: boolean;
+    flippedAntiDiagonal: boolean;
+    whatSquare: (square: number[]) => string ;
+
+
     
 
 }
 
 export const UseMath = () => {
     const [square, setSquare] = useState<number[]>([1, 2, 3, 4]);
-    const [ogSquare, setOgSquare] = useState<number[]>([1, 2, 3, 4]);
-    const horizontal = (square: number[]) => {
-        return [square[1], square[0], square[3], square[2]]
-    }
-    const vertical = (square: number[]) => {
-        return [square[3], square[2], square[1], square[0]]
-    }
-    const diagonal = (square: number[]) => {
-        return [square[0], square[3], square[2], square[1]]
-    }
-    const antiDiagonal = (square: number[]) => {
-        return [square[2], square[1], square[0], square[3]]
-    }
-    const ninety = (square: number[]) => {
-        return [square[3], square[0], square[1], square[2]]
-        // setSquare([square[3], square[0], square[1], square[2]])
-    }
-    const one80 = (square: number[]) => {
-        return ninety(ninety(square));
-    }
-    const two70 = (square: number[]) => {
-        return one80(ninety(square));
-    }
+    const [flippedVertical, setFlippedVertical] = useState(false)
+    const [flippedHorizontal, setFlippedHorizontal] = useState(false)
+    const [rotation, setRotation] = useState(0);
+    const [flippedDiagonal, setFlippedDiagonal] = useState(false);
+    const [flippedAntiDiagonal, setFlippedAntiDiagonal] = useState(false);
 
     // const horizontal = (square: number[]) => {
-    //     setSquare([square[1], square[0], square[3], square[2]])
+    //     return [square[1], square[0], square[3], square[2]]
     // }
     // const vertical = (square: number[]) => {
-    //     setSquare([square[3], square[2], square[1], square[0]])
+    //     return [square[3], square[2], square[1], square[0]]
     // }
     // const diagonal = (square: number[]) => {
-    //     setSquare([square[0], square[3], square[2], square[1]])
+    //     return [square[0], square[3], square[2], square[1]]
     // }
     // const antiDiagonal = (square: number[]) => {
-    //     setSquare([square[2], square[1], square[0], square[3]])
+    //     return [square[2], square[1], square[0], square[3]]
     // }
     // const ninety = (square: number[]) => {
-    //     setSquare([square[3], square[0], square[1], square[2]])
+    //     return [square[3], square[0], square[1], square[2]]
     //     // setSquare([square[3], square[0], square[1], square[2]])
     // }
     // const one80 = (square: number[]) => {
-    //     setSquare([square[2], square[3], square[0], square[1]]);
+    //     return ninety(ninety(square));
     // }
     // const two70 = (square: number[]) => {
-    //     setSquare([square[1], square[2], square[3], square[0]]);
+    //     return one80(ninety(square));
     // }
 
+    const horizontal = () => {
+        setSquare([square[1], square[0], square[3], square[2]])
+        setFlippedHorizontal(!flippedHorizontal);
+    }
+    const vertical = () => {
+        setSquare([square[3], square[2], square[1], square[0]])
+        setFlippedVertical(!flippedVertical);
+    }
+    const diagonal = () => {
+        setSquare([square[0], square[3], square[2], square[1]])
+        setFlippedDiagonal(!flippedDiagonal)
+    }
+    const antiDiagonal = () => {
+        setSquare([square[2], square[1], square[0], square[3]])
+        setFlippedAntiDiagonal(!flippedAntiDiagonal)
+    }
+    const ninety = () => {
+        setSquare([square[3], square[0], square[1], square[2]])
+        setRotation(rotation + 90);
+    }
+    const one80 = () => {
+        setSquare([square[2], square[3], square[0], square[1]]);
+        setRotation(rotation + 180);
+    }
+    const two70 = () => {
+        setSquare([square[1], square[2], square[3], square[0]]);
+        setRotation(rotation + 270);
+    }
+
+    const whatSquare = (square: number[]) => {
+        if(square[0] == 1){
+            if(square[1] == 2){
+                if (square[2] == 3){
+                    return "0";
+                }
+            }
+            if(square[1] == 4){
+                return "diagonal";
+            }
+        }
+        else if (square[0] == 2) {
+            if(square[1] == 1){
+                return "horizontal";
+            }
+            else if(square[1] == 3){
+                return "270";
+            }
+        }
+        else if (square[0] == 3) {
+            if(square[1] == 4){
+                return "180";
+            }
+            else if (square[1] == 2){
+                return "antiDiagonal";
+            }
+        }
+        else if (square[0] == 4) {
+            if(square[1] == 3){
+                return "vertical";
+            }
+            else if(square[1] == 1){
+                return "90";
+            }
+        }
+        else{
+            return "";
+        }
+
+    }
+
     const squaresMatch = (square1: number[], square2: number[]) => {
+
         return square1.every((value, index) => value === square2[index]);
     }
 
     const onSave = (square: number[]) => {
         setSquare(square);
     }
-
-
+    const onReset = () => {
+        setSquare([1,2,3,4]);
+        setRotation(0);
+        setFlippedHorizontal(false);
+        setFlippedVertical(false);
+        setFlippedDiagonal(false);
+        setFlippedAntiDiagonal(false);
+    }
 
     return {
+        square,
         horizontal,
         vertical,
         diagonal,
@@ -81,8 +148,14 @@ export const UseMath = () => {
         ninety,
         one80,
         two70,
-        squaresMatch
-
+        squaresMatch,
+        flippedVertical,
+        flippedHorizontal,
+        flippedAntiDiagonal,
+        flippedDiagonal,
+        rotation,
+        onReset,
+        whatSquare,
     };
 
 }

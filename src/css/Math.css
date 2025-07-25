@@ -1,4 +1,7 @@
-
+h1{
+  width: 100%;
+  text-align: center;
+}
 
 .square {
     height: 20em;
