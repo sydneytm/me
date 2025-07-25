@@ -7,7 +7,7 @@ import { DogTown } from './screens/dogTown.jsx';
 import { Math } from './screens/Math/Math.jsx';
 function App() {
   return (
-    <Router>
+    <Router basename="/me">
     <Navigation />
     <div style={{ marginLeft: '250px', padding: '20px' }}>
       <Routes>
