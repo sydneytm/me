@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // Extract the path after your repo name
+      const redirectPath = window.location.pathname.replace('/me', '');
+      window.location.replace('/me/' + '?redirect=' + encodeURIComponent(redirectPath));
+    </script>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>
