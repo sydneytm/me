@@ -108,5 +108,4 @@ return(
         </Grid>
     </ThemeProvider> )
 }
-// export default SquareAnimation;
 

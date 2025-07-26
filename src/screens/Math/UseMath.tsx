@@ -35,11 +35,8 @@ export const UseMath = () => {
     }
     const diagonal = () => {
         setSquare([square[2], square[1], square[0], square[3]])
-        setFlippedDiagonal(!flippedDiagonal)
-    }
-    const antiDiagonal = () => {
-        setSquare([square[0], square[3], square[2], square[1]])
-        setFlippedAntiDiagonal(!flippedAntiDiagonal)
+        setFlippedHorizontal(!flippedHorizontal);
+        setRotation(rotation + 90);
     }
     const ninety = () => {
         setSquare([square[3], square[0], square[1], square[2]])
@@ -52,6 +49,11 @@ export const UseMath = () => {
     const two70 = () => {
         setSquare([square[1], square[2], square[3], square[0]]);
         setRotation(rotation + 270);
+    }
+    const antiDiagonal = () => {
+        setSquare([square[0], square[3], square[2], square[1]])
+        setFlippedVertical(!flippedVertical);
+        setRotation(rotation + 90);
     }
 
     const whatSquare = (square: number[]) => {
