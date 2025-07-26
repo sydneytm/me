@@ -9,9 +9,9 @@ const Navigation = () => {
       <h2>Navigation</h2>
       <ul>
         <li onClick={() => navigate('')}>Home</li>
-        <li onClick={() => navigate('/dogtown')}>Dog Town</li>
+        <li onClick={() => navigate('me/dogtown')}>Dog Town</li>
         {/* <li onClick={() => navigate('/services')}>Services</li> */}
-        <li onClick={() => navigate('/math')}>Math</li>
+        <li onClick={() => navigate('/me/math')}>Math</li>
       </ul>
     </div>
   );

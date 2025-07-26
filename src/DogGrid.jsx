@@ -1,8 +1,5 @@
-// import './App.css'
 import Finn from "./assets/finn.png"
 import Cooper from "./assets/cooper.png"
-import SuperFinn from "./assets/superFinn.png"
-// import { Grid } from '@mui/material';
 import Grid from '@mui/material/Grid'
 import Stack from '@mui/material/Stack'
 export const DogGrid = () => {
@@ -30,9 +27,6 @@ export const DogGrid = () => {
                 <img src={Cooper} alt="Cooper" className="dog-image" />
                 </Stack>
             </Grid>
-            {/* <Grid item xs={12} sm={6} md={4}>
-                <img src={SuperFinn} alt="Super Finn" className="dog-image" />
-            </Grid> */}
         </Grid>
     )
 }
