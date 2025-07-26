@@ -16,7 +16,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +48,7 @@
             var fragment = window.location.hash;
             if (path !== '/' && path.indexOf('.') === -1) { // Only redirect if not root or a file
                 sessionStorage.setItem('redirect', path + query + fragment);
-                window.location.replace('/me' + '/index.html'); // Replace with your repo name
+                window.location.replace('/me'); // Replace with your repo name
             }
         })();
     </script>
