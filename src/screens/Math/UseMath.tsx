@@ -34,11 +34,11 @@ export const UseMath = () => {
         setFlippedVertical(!flippedVertical);
     }
     const diagonal = () => {
-        setSquare([square[0], square[3], square[2], square[1]])
+        setSquare([square[2], square[1], square[0], square[3]])
         setFlippedDiagonal(!flippedDiagonal)
     }
     const antiDiagonal = () => {
-        setSquare([square[2], square[1], square[0], square[3]])
+        setSquare([square[0], square[3], square[2], square[1]])
         setFlippedAntiDiagonal(!flippedAntiDiagonal)
     }
     const ninety = () => {
@@ -62,7 +62,7 @@ export const UseMath = () => {
                 }
             }
             if(square[1] == 4){
-                return "Diagonal";
+                return "Anti-diagonal";
             }
         }
         else if (square[0] == 2) {
@@ -78,7 +78,7 @@ export const UseMath = () => {
                 return "180";
             }
             else if (square[1] == 2){
-                return "Anti-diagonal";
+                return "Diagonal";
             }
         }
         else if (square[0] == 4) {

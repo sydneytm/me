@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { useState } from 'react';
 import '../../css/Home.css';
-import { useSpring, animated, a } from '@react-spring/web';
+import { useSpring, animated } from '@react-spring/web';
 import '../../css/squareAnimation.css';
-import Square from '../../assets/square.png';
 import { UseMath } from './UseMath';
 import { Grid, Button, Typography, Stack } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -11,12 +9,12 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#b0c4b1',
-      light: '#d1e7dd',
-      dark: '#6c757d',
+      light: '#fed9b7',
+      dark: '#ff4d6d',
       contrastText: '#000000',
     },
     secondary: {
-      main: '#edafb8',
+      main: '#ff758f',
     },
     background: {
       default: '#f3f4f6',
@@ -44,7 +42,7 @@ return(
         style={{
           width: 150,
           height: 150,
-          background: "#60a5fa",
+          background: "#f07167",
           transform,
           transformStyle: "preserve-3d",
           cursor: "pointer",
@@ -58,7 +56,7 @@ return(
     </div> 
     </Grid>
 <Grid item size={7}>
-  <Typography variant="h3" style={{ marginTop: "20px", color: "black", textAlign: "center" }}>
+  <Typography variant="h3" color= 'primary.dark' style={{ marginTop: "20px", textAlign: "center" }}>
     {whatSquare(square)}
   </Typography>
 </Grid>
@@ -100,15 +98,13 @@ return(
           }} className="btn">
           AntiDiagonal
         </Button>
-        </Stack>
-        </Grid>
-        <div className="flex gap-4" style={{ marginTop: "40px" }} >
-        <button onClick={() => {
+        <Button variant='contained' color= 'secondary' onClick={() => {
           onReset();
           }} className="btn">
           Reset
-        </button>
-        </div>
+        </Button>
+        </Stack>
+        </Grid>
         </Grid>
     </ThemeProvider> )
 }
