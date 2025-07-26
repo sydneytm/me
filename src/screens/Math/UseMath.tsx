@@ -1,25 +1,21 @@
 import { useState } from "react";
 
-export interface UseMath {
-    square:  number[];
-    horizontal: (square: number[]) => number[];
-    vertical: (square: number[]) => number[];
-    diagonal: (square: number[]) => number[];
-    antiDiagonal: (square: number[]) => number[];
-    ninety: (square: number[]) => number[];
-    one80: (square: number[]) => number[];
-    two70: (square: number[]) => number[];
-    squaresMatch: (square1: number[], square2: number[]) => boolean;
-    flippedVertical: boolean;
-    flippedHorizontal: boolean;
-    flippedDiagonal: boolean;
-    flippedAntiDiagonal: boolean;
-    whatSquare: (square: number[]) => string ;
-
-
-    
-
-}
+// export interface UseMath {
+//     square:  number[];
+//     horizontal: (square: number[]) => number[];
+//     vertical: (square: number[]) => number[];
+//     diagonal: (square: number[]) => number[];
+//     antiDiagonal: (square: number[]) => number[];
+//     ninety: (square: number[]) => number[];
+//     one80: (square: number[]) => number[];
+//     two70: (square: number[]) => number[];
+//     squaresMatch: (square1: number[], square2: number[]) => boolean;
+//     flippedVertical: boolean;
+//     flippedHorizontal: boolean;
+//     flippedDiagonal: boolean;
+//     flippedAntiDiagonal: boolean;
+//     whatSquare: (square: number[]) => string ;
+// }
 
 export const UseMath = () => {
     const [square, setSquare] = useState<number[]>([1, 2, 3, 4]);
@@ -28,29 +24,6 @@ export const UseMath = () => {
     const [rotation, setRotation] = useState(0);
     const [flippedDiagonal, setFlippedDiagonal] = useState(false);
     const [flippedAntiDiagonal, setFlippedAntiDiagonal] = useState(false);
-
-    // const horizontal = (square: number[]) => {
-    //     return [square[1], square[0], square[3], square[2]]
-    // }
-    // const vertical = (square: number[]) => {
-    //     return [square[3], square[2], square[1], square[0]]
-    // }
-    // const diagonal = (square: number[]) => {
-    //     return [square[0], square[3], square[2], square[1]]
-    // }
-    // const antiDiagonal = (square: number[]) => {
-    //     return [square[2], square[1], square[0], square[3]]
-    // }
-    // const ninety = (square: number[]) => {
-    //     return [square[3], square[0], square[1], square[2]]
-    //     // setSquare([square[3], square[0], square[1], square[2]])
-    // }
-    // const one80 = (square: number[]) => {
-    //     return ninety(ninety(square));
-    // }
-    // const two70 = (square: number[]) => {
-    //     return one80(ninety(square));
-    // }
 
     const horizontal = () => {
         setSquare([square[1], square[0], square[3], square[2]])
@@ -89,12 +62,12 @@ export const UseMath = () => {
                 }
             }
             if(square[1] == 4){
-                return "diagonal";
+                return "Diagonal";
             }
         }
         else if (square[0] == 2) {
             if(square[1] == 1){
-                return "horizontal";
+                return "Horizontal";
             }
             else if(square[1] == 3){
                 return "270";
@@ -105,12 +78,12 @@ export const UseMath = () => {
                 return "180";
             }
             else if (square[1] == 2){
-                return "antiDiagonal";
+                return "Anti-diagonal";
             }
         }
         else if (square[0] == 4) {
             if(square[1] == 3){
-                return "vertical";
+                return "Vertical";
             }
             else if(square[1] == 1){
                 return "90";
@@ -125,10 +98,6 @@ export const UseMath = () => {
     const squaresMatch = (square1: number[], square2: number[]) => {
 
         return square1.every((value, index) => value === square2[index]);
-    }
-
-    const onSave = (square: number[]) => {
-        setSquare(square);
     }
     const onReset = () => {
         setSquare([1,2,3,4]);

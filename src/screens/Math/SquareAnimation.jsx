@@ -5,7 +5,25 @@ import { useSpring, animated, a } from '@react-spring/web';
 import '../../css/squareAnimation.css';
 import Square from '../../assets/square.png';
 import { UseMath } from './UseMath';
-import { Grid, Button, Typography } from '@mui/material';
+import { Grid, Button, Typography, Stack } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#b0c4b1',
+      light: '#d1e7dd',
+      dark: '#6c757d',
+      contrastText: '#000000',
+    },
+    secondary: {
+      main: '#edafb8',
+    },
+    background: {
+      default: '#f3f4f6',
+      paper: '#ffffff',
+    },
+  },
+})
 export const SquareAnimation = () => {
 
   const { square, horizontal, vertical, diagonal, antiDiagonal, flippedHorizontal, flippedVertical, flippedAntiDiagonal, flippedDiagonal, ninety, one80, two70, rotation, onReset, whatSquare} = UseMath();
@@ -18,9 +36,9 @@ export const SquareAnimation = () => {
 
 
 return( 
-    <>
+    <ThemeProvider theme={theme}>
     <Grid container columns={12} spacing={10} justifyContent="center" alignItems="center" style={{ marginTop: "20px" }}> 
-    <Grid item size={5}>
+    <Grid item size={5} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 <div style={{ position: "relative", width: 150, height: 150 }}>
 <animated.div
         style={{
@@ -46,43 +64,43 @@ return(
 </Grid>
   
   <Grid item size={12}>
-<div className="flex gap-4" style={{ marginTop: "40px" }}>
-    <Button onClick={() => horizontal()} className="btn">
+<Stack direction={'row'} spacing={3} style={{ marginTop: "40px" }}>
+    <Button variant='contained' color='primary' onClick={() => horizontal()} className="btn">
           Horizontal
         </Button>
-        <button onClick={() => {
+        <Button variant='contained' color='primary' onClick={() => {
           vertical()
           console.log("flippedVertical", square)
           
           }} className="btn">
           Vertical
-        </button>
-        <button onClick={() => {
+        </Button>
+        <Button variant='contained' color='primary' onClick={() => {
           ninety();
           }} className="btn">
           90
-        </button>
-        <button onClick={() => {
+        </Button>
+        <Button variant='contained' color='primary' onClick={() => {
           one80();
           }} className="btn">
           180
-        </button>
-        <button onClick={() => {
+        </Button>
+        <Button variant='contained' color='primary' onClick={() => {
           two70();
           }} className="btn">
           270
-        </button>
-        <button onClick={() => {
+        </Button>
+        <Button variant='contained' color='primary' onClick={() => {
           diagonal()
           }} className="btn">
           Diagonal
-        </button>
-        <button onClick={() => {
+        </Button>
+        <Button variant='contained' color='primary' onClick={() => {
           antiDiagonal()
           }} className="btn">
           AntiDiagonal
-        </button>
-        </div>
+        </Button>
+        </Stack>
         </Grid>
         <div className="flex gap-4" style={{ marginTop: "40px" }} >
         <button onClick={() => {
@@ -91,12 +109,8 @@ return(
           Reset
         </button>
         </div>
-
-        <div>
-          {whatSquare(square)}
-        </div>
         </Grid>
-    </> )
+    </ThemeProvider> )
 }
 // export default SquareAnimation;
 
