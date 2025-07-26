@@ -18,7 +18,7 @@ function App() {
     <Navigation />
     <div style={{ marginLeft: '250px', padding: '20px' }}>
       <Routes>
-        <Route path="" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/me/dogtown" element={<DogTown />} />
         {/* {/* <Route path="/services" element={<Services />} /> */}
         <Route path="/me/math" element={<Math />} /> 
