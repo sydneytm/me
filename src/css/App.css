@@ -9,7 +9,7 @@
   padding-left:7%;
 }
 header {
-  color: pink;
+  /* color: pink; */
   /* text-align: center; */
   align-items: center;
   padding-left:10%;
@@ -18,9 +18,9 @@ header {
   font-size:x-large
   
 }
-body {
+/* body {
   background-color: pink;
-}
+} */
 /* 
 .logo {
   height: 6em;
@@ -32,3 +32,11 @@ body {
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 } */
+
+
+.lexend-deca-thick {
+  font-family: "Lexend Deca", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 800;
+  font-style: normal;
+}

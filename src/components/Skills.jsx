@@ -7,8 +7,9 @@ import SpringBootLogo from '../assets/spring-boot.png';
 import SvelteLogo from '../assets/svelte.png';
 import CLogo from '../assets/C_Programming_Language.svg';
 import CPlusPlusLogo from '../assets/c++.svg.png';
-import { Grid } from '@mui/material';
+import { Grid, Chip, Typography } from '@mui/material';
 import '../css/Home.css';
+// import {DoneIcon} from '@mui/icons-material/Done';
 export const Skills = () => {
     return(
     <>
@@ -19,8 +20,11 @@ export const Skills = () => {
     <Grid item size={6} xs={12} sm={6} md={4}>
         <img src={SvelteLogo} alt="React" className="img" />
     </Grid>
-
-
+<Grid item size ={12}>
+<h2>
+Languages: 
+</h2>
+</Grid>
     <Grid item xs={12} sm={6} md={4}>
         <img src={JavaLogo} alt="React" className="img" />
     </Grid>
@@ -39,6 +43,7 @@ export const Skills = () => {
 
 
     </Grid>
+    
     
     </>
 

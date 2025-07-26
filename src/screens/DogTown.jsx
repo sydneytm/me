@@ -6,12 +6,15 @@ import Finn from '../assets/finn.png';
 import SuperFinn from '../assets/superFinn.png';
 import { DogGrid } from '../DogGrid.jsx';
 import '../css/dogTown.css'
+import { Grid } from '@mui/material';
 export  const DogTown = () => {
   const [isSpinning, setSpinning] = useState(false);
   const [superDog, setSuperDog] = useState(false);
 
   return (
     <>
+    <Grid container direction={'row'}>
+      <Grid item>
       <div>
         <a target="_blank" onClick={() => setSpinning((isSpinning) => !isSpinning)}>
           {isSpinning && <img src={Cooper} className="nonSpinLogo react" alt="Finn" />}
@@ -27,12 +30,14 @@ export  const DogTown = () => {
           Super Dog
         </button>
       </div>
-      
+      </Grid>
       {/* {superDog && <img src={SuperFinn} className="super-dog" alt="React logo"/>}
       {!superDog && <p className="filler" alt="React logo" />} */}
 
-
+      <Grid item>
       <DogGrid />
+      </Grid>
+      </Grid>
     </>
   );
 };

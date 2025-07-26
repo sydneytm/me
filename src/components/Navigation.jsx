@@ -20,7 +20,6 @@ const Navigation = () => {
         <li className= "dropdown" onClick={handleMathClick}>
           Math {mathOpen ? '▼' : '▶'}
         </li>
-
         {mathOpen && (
           <ul className="sub-menu">
             <li style={{marginLeft:"10px"}} onClick={() => navigate('/me/math/d4')}>D4</li>
@@ -28,7 +27,7 @@ const Navigation = () => {
             <li style={{marginLeft:"10px"}} onClick={() => navigate('/me/math')}>Calculus</li>
           </ul>
         )}
-        
+
       </ul>
     </div>
   );
