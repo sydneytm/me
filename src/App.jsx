@@ -14,7 +14,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 // } from 'react-router-dom';
 function App() {
   return (
-    <Router basename="/me">
+    <Router>
     <Navigation />
     <div style={{ marginLeft: '250px', padding: '20px' }}>
       <Routes>
