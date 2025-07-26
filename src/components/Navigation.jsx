@@ -9,8 +9,7 @@ const Navigation = () => {
     setMathOpen(!mathOpen);
   };
   return (
-    <div className="sidebar">
-      <h2>Navigation</h2>
+    <div className="top-nav">
       <ul>
         <li onClick={() => navigate('')}>Home</li>
         <li onClick={() => navigate('me/dogtown')}>Dog Town</li>
@@ -18,17 +17,18 @@ const Navigation = () => {
         {/* <li onClick={() => navigate('/me/math')}>Math</li> */}
 
 
-        <li onClick={handleMathClick}>
+        <li className= "dropdown" onClick={handleMathClick}>
           Math {mathOpen ? '▼' : '▶'}
         </li>
 
         {mathOpen && (
           <ul className="sub-menu">
-            <li style={{marginLeft:"10px"}} onClick={() => navigate('/me/math/d4')}>Algebra</li>
+            <li style={{marginLeft:"10px"}} onClick={() => navigate('/me/math/d4')}>D4</li>
             <li style={{marginLeft:"10px"}} onClick={() => navigate('/me/math')}>Geometry</li>
             <li style={{marginLeft:"10px"}} onClick={() => navigate('/me/math')}>Calculus</li>
           </ul>
         )}
+        
       </ul>
     </div>
   );

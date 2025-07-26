@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
     <Navigation />
-    <div style={{ marginLeft: '250px', padding: '20px' }}>
+    <div style={{ marginTop: '150px', padding: '20px' }}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/me/dogtown" element={<DogTown />} />
@@ -23,5 +23,6 @@ function App() {
 
   )
 }
+
 
 export default App

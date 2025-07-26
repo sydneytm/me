@@ -28,8 +28,8 @@ export  const DogTown = () => {
         </button>
       </div>
       
-      {superDog && <img src={SuperFinn} className="super-dog" alt="React logo"/>}
-      {!superDog && <p className="filler" alt="React logo" />}
+      {/* {superDog && <img src={SuperFinn} className="super-dog" alt="React logo"/>}
+      {!superDog && <p className="filler" alt="React logo" />} */}
 
 
       <DogGrid />

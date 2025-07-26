@@ -23,16 +23,11 @@ const theme = createTheme({
   },
 })
 export const SquareAnimation = () => {
-
   const { square, horizontal, vertical, diagonal, antiDiagonal, flippedHorizontal, flippedVertical, flippedAntiDiagonal, flippedDiagonal, ninety, one80, two70, rotation, onReset, whatSquare} = UseMath();
-  
-  
   const { transform } = useSpring({
     transform: `perspective(200px) rotateX(${flippedVertical ? 180 : 0}deg) rotateY(${flippedHorizontal ? 180 : 0}deg) rotateZ(${rotation}deg)`,
     config: { mass: 5, tension: 500, friction: 80 },
   })
-
-
 return( 
     <ThemeProvider theme={theme}>
     <Grid container columns={12} spacing={10} justifyContent="center" alignItems="center" style={{ marginTop: "20px" }}> 
@@ -67,9 +62,7 @@ return(
           Horizontal
         </Button>
         <Button variant='contained' color='primary' onClick={() => {
-          vertical()
-          console.log("flippedVertical", square)
-          
+          vertical()          
           }} className="btn">
           Vertical
         </Button>

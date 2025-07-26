@@ -16,3 +16,8 @@ h1 {
     height: 300px;
     color: blue
   }
+
+  .img {
+    height: 6em;
+    padding: 1.5em;
+  }
