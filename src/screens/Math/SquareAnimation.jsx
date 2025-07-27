@@ -7,21 +7,6 @@ import { Grid, Button, Typography, Stack } from "@mui/material";
 import theme from "../../model/theme/theme.jsx";
 import { ThemeProvider } from "@mui/material/styles";
 
-const OperationButton = (func, name) => {
-  return (
-    <Button
-      variant="contained"
-      color="primary"
-      onClick={() => {
-        func();
-      }}
-      className="btn"
-    >
-      {name}
-    </Button>
-  );
-};
-
 export const SquareAnimation = () => {
   const {
     square,
@@ -128,15 +113,14 @@ export const SquareAnimation = () => {
 
         <Grid item size={12}>
           <Stack direction={"row"} spacing={3} style={{ marginTop: "40px" }}>
-            {/* <Button
+            <Button
               variant="contained"
               color="primary"
               onClick={() => horizontal()}
               className="btn"
             >
               Horizontal
-            </Button> */}
-            <OperationButton func={horizontal} name="Horizontal" />
+            </Button>
             <Button
               variant="contained"
               color="primary"
