@@ -22,9 +22,9 @@ const Skill = ({ src }) => {
 export const Skills = () => {
   return (
     <>
-      <Grid container spacing={2} justifyContent="flex-start" marginTop={10}>
-        <Typography>Technology and tools I use:</Typography>
+      <Typography marginTop={10}>Technology and tools I use:</Typography>
 
+      <Grid container spacing={2} justifyContent="flex-start">
         <Skill src={ReactLogo} />
         <Skill src={SvelteLogo} />
         <Skill src={Postgre} />
