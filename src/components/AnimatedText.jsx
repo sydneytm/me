@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import "../css/App.css";
+import theme from "../model/theme/theme.jsx";
+
 const AnimFeTurbulence = animated("feTurbulence");
 const AnimFeDisplacementMap = animated("feDisplacementMap");
-
 export const AnimatedText = () => {
   const [open, toggle] = useState(false);
   const [{ freq, factor, scale, opacity }] = useSpring(
@@ -43,7 +44,7 @@ export const AnimatedText = () => {
             x="100"
             y="150"
             fontSize="80"
-            fill="#52796f"
+            fill={theme.palette.secondary.light}
             className="lexend-deca-thick"
             style={{ fontWeight: "bold", marginBottom: "50px" }}
           >

@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Navigation />
-      <div style={{ marginTop: "150px", padding: "20px" }}>
+      <div style={{ marginTop: "18px", padding: "20px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/me/dogtown" element={<DogTown />} />

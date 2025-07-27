@@ -4,24 +4,24 @@ import { useSpring, animated } from "@react-spring/web";
 import "../../css/squareAnimation.css";
 import { UseMath } from "./UseMath";
 import { Grid, Button, Typography, Stack } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#b0c4b1",
-      light: "#fed9b7",
-      dark: "#ff4d6d",
-      contrastText: "#000000",
-    },
-    secondary: {
-      main: "#ff758f",
-    },
-    background: {
-      default: "#f3f4f6",
-      paper: "#ffffff",
-    },
-  },
-});
+import theme from "../../model/theme/theme.jsx";
+import { ThemeProvider } from "@mui/material/styles";
+
+const OperationButton = (func, name) => {
+  return (
+    <Button
+      variant="contained"
+      color="primary"
+      onClick={() => {
+        func();
+      }}
+      className="btn"
+    >
+      {name}
+    </Button>
+  );
+};
+
 export const SquareAnimation = () => {
   const {
     square,
@@ -128,14 +128,15 @@ export const SquareAnimation = () => {
 
         <Grid item size={12}>
           <Stack direction={"row"} spacing={3} style={{ marginTop: "40px" }}>
-            <Button
+            {/* <Button
               variant="contained"
               color="primary"
               onClick={() => horizontal()}
               className="btn"
             >
               Horizontal
-            </Button>
+            </Button> */}
+            <OperationButton func={horizontal} name="Horizontal" />
             <Button
               variant="contained"
               color="primary"

@@ -6,21 +6,20 @@
   /* color: blue */
   /* text-align: center; */
   margin-top: 0;
-  padding-left:7%;
+  padding-left: 7%;
 }
 header {
   /* color: pink; */
   /* text-align: center; */
   align-items: center;
-  padding-left:10%;
+  padding-left: 10%;
   margin-top: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size:x-large
-  
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: x-large;
 }
-/* body {
-  background-color: pink;
-} */
+body {
+  background-color: white;
+}
 /* 
 .logo {
   height: 6em;
@@ -32,7 +31,6 @@ header {
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 } */
-
 
 .lexend-deca-thick {
   font-family: "Lexend Deca", sans-serif;

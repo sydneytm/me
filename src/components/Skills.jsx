@@ -7,43 +7,35 @@ import SpringBootLogo from "../assets/spring-boot.png";
 import SvelteLogo from "../assets/svelte.png";
 import CLogo from "../assets/C_Programming_Language.svg";
 import CPlusPlusLogo from "../assets/c++.svg.png";
-import { Grid, Chip, Typography } from "@mui/material";
+import { Grid, Chip, Typography, Divider } from "@mui/material";
 import "../css/Home.css";
+import React from "react";
+
+const Skill = ({ src }) => {
+  return (
+    <Grid item>
+      <img src={src} className="img" />
+    </Grid>
+  );
+};
 
 export const Skills = () => {
   return (
     <>
       <Grid container spacing={2} justifyContent="flex-start">
-        <Grid item xs={12} sm={6} md={4}>
-          <img src={ReactLogo} alt="React" className="img" />
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <img src={SvelteLogo} alt="React" className="img" />
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <img src={Postgre} alt="React" className="img" />
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <img src={SpringBootLogo} alt="React" className="img" />
-        </Grid>
+        <Skill src={ReactLogo} />
+        <Skill src={SvelteLogo} />
+        <Skill src={Postgre} />
+        <Skill src={SpringBootLogo} />
+        <Divider textAlign="left">content </Divider>
         <Grid item size={12}>
-          <h2>Languages:</h2>
+          <Typography>Languages:</Typography>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <img src={JavaLogo} alt="React" className="img" />
-        </Grid>
-        <Grid item>
-          <img src={CLogo} alt="React" className="img" />
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <img src={CPlusPlusLogo} alt="React" className="img" />
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <img src={PythonLogo} alt="React" className="img" />
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <img src={RacketLogo} alt="React" className="img" />
-        </Grid>
+        <Skill src={JavaLogo} />
+        <Skill src={CLogo} />
+        <Skill src={CPlusPlusLogo} />
+        <Skill src={PythonLogo} />
+        <Skill src={RacketLogo} />
       </Grid>
     </>
   );
