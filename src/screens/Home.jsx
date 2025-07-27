@@ -10,10 +10,10 @@ export const Home = () => {
   return (
     <ThemeProvider theme={theme}>
       <AnimatedText />
-      <Typography color="primary">
+      <Typography color="secondary.dark">
         Math and Computer Science student at Northwestern University
       </Typography>
-      <h2>Technology and tools I use: </h2>
+      {/* <h2>Technology and tools I use: </h2> */}
       <Skills />
 
       <svg width={200} height={200}>

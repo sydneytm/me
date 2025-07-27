@@ -44,7 +44,7 @@ export const AnimatedText = () => {
             x="100"
             y="150"
             fontSize="80"
-            fill={theme.palette.secondary.light}
+            fill={theme.palette.secondary.main}
             className="lexend-deca-thick"
             style={{ fontWeight: "bold", marginBottom: "50px" }}
           >
