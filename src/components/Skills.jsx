@@ -13,7 +13,7 @@ import "../css/Home.css";
 export const Skills = () => {
   return (
     <>
-      <Grid container spacing={2} justifyContent="center">
+      <Grid container spacing={2} justifyContent="flex-start">
         <Grid item xs={12} sm={6} md={4}>
           <img src={ReactLogo} alt="React" className="img" />
         </Grid>
