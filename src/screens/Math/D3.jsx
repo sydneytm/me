@@ -132,7 +132,7 @@ export const D3 = () => {
               }}
               className="btn"
             >
-              120fsdfs
+              120
             </Button>
             <Button
               variant="contained"
