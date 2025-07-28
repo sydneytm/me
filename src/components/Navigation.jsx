@@ -47,7 +47,7 @@ const Navigation = () => {
             </li>
             <li
               style={{ color: theme.palette.secondary.dark }}
-              onClick={() => navigate("/me/math")}
+              onClick={() => navigate("/me/math/d3")}
             >
               Geometry
             </li>
