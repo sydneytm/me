@@ -1,32 +1,40 @@
 h1 {
-    height: 20vh;
-    width: 250px;
-    top: 0;
-    left: 0;
-    padding-top: 20px;
-    /* background-color: hotpink; */
-    color: white;
-  }
+  height: 20vh;
+  width: 250px;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  /* background-color: hotpink; */
+  color: white;
+}
 
-  .img {
-    height: 4em;
-    padding: 1.5em;
-  }
+.img {
+  height: 4em;
+  padding: 1.5em;
+}
 
-  .circle-container {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-  }
-  
-  .circle-container img {
-    width: 80%;
-    height: 80%;
-    object-fit:scale-down;
-  }
+.circle-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.circle-container img {
+  width: 80%;
+  height: 80%;
+  object-fit: scale-down;
+}
+
+:root {
+  --step0: #ff615d;
+  --step1: #bad5ea;
+  --step2: #fd8769;
+  --step3: #356d94;
+  --step4: #ffdcb3;
+}

@@ -1,34 +1,32 @@
-h1{
+h1 {
   width: 100%;
   text-align: center;
 }
 
 .square {
-    height: 20em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
+  height: 20em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
 
+.ninety:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.ninety.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
 
-  .ninety:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+@keyframes ninety {
+  from {
+    transform: rotate(0deg);
   }
-  .ninety.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
+  to {
+    transform: rotate(90deg);
   }
-  
+}
 
-  @keyframes ninety {
-    from {
-      transform:rotate(0deg);
-    }
-    to {
-      transform: rotate(90deg);
-    }
-  }
-
-  /* @keyframes one80 {
+/* @keyframes one80 {
     from {
       transform:rotate(0deg);
     }
@@ -46,8 +44,8 @@ h1{
     }
   } */
 
-  @media (prefers-reduced-motion: no-preference) {
-    .ninety {
-      animation: ninety 2s forwards ;
-    }
+@media (prefers-reduced-motion: no-preference) {
+  .ninety {
+    animation: ninety 2s forwards;
   }
+}

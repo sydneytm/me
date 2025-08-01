@@ -43,12 +43,12 @@ export const AnimatedText = () => {
           <text
             x="100"
             y="150"
-            fontSize="80"
+            fontSize="60"
             fill={theme.palette.secondary.main}
             className="lexend-deca-thick"
             style={{ fontWeight: "bold", marginBottom: "50px" }}
           >
-            Sydney TerMolen
+            Hiiiii
           </text>
         </g>
       </animated.svg>

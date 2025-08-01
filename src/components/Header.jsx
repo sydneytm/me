@@ -5,8 +5,8 @@ import { useState } from "react";
 import theme from "../model/theme/theme";
 import { Typography } from "@mui/material";
 
-const Navigation = () => {
-  // const navigate = useNavigate();
+export const Header = () => {
+  const navigate = useNavigate();
   const [mathOpen, setMathOpen] = useState(false); // toggle state
   const handleMathClick = () => {
     setMathOpen(!mathOpen);
@@ -20,19 +20,19 @@ const Navigation = () => {
       <ul>
         <li
           style={{ color: theme.palette.secondary.dark }}
-          // onClick={() => navigate("")}
+          onClick={() => navigate("")}
         >
           Home
         </li>
         <li
           style={{ color: theme.palette.secondary.dark }}
-          // onClick={() => navigate("me/dogtown")}
+          onClick={() => navigate("me/dogtown")}
         >
           Dog Town
         </li>
         <li
           style={{ color: theme.palette.secondary.dark }}
-          // onClick={() => navigate("me/parallax")}
+          onClick={() => navigate("me/parallax")}
         >
           Parallax
         </li>
@@ -50,19 +50,19 @@ const Navigation = () => {
           <ul className="sub-menu">
             <li
               style={{ color: theme.palette.secondary.dark }}
-              // onClick={() => navigate("/me/math/d4")}
+              onClick={() => navigate("/me/math/d4")}
             >
               D4
             </li>
             <li
               style={{ color: theme.palette.secondary.dark }}
-              // onClick={() => navigate("/me/math/d3")}
+              onClick={() => navigate("/me/math/d3")}
             >
               D3
             </li>
             <li
               style={{ color: theme.palette.secondary.dark }}
-              // onClick={() => navigate("/me/math")}
+              onClick={() => navigate("/me/math")}
             >
               Calculus
             </li>
@@ -73,4 +73,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Header;
