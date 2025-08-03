@@ -1,21 +1,16 @@
 import { Card, Grid } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useState } from "react";
+import "./skills.css";
+
 export function SkillsCard(props) {
-  const [isHover, setHover] = useState(false);
-  const controls = useAnimation();
-  const handleHover = async () => {
-    setHover(true);
-    await controls.start({ scale: 2, transition: { duration: 0.2 } });
-    await controls.start({ scale: 1, transition: { duration: 0.2 } });
-  };
+  const [isOpen, setOpen] = useState(false);
   return (
+    // <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
     <motion.div
-      onHoverStart={() => handleHover()}
-      onHoverEnd={() => setHover(false)}
-      animate={{
-        scale: isHover ? 1.2 : 1,
-      }}
+      className="skillCard"
+      whileHover={{ scale: 1.2 }}
+      onClick={{ scale: 2 }}
     >
       <Grid item>
         <Card style={{ textAlign: "center" }}>

@@ -42,6 +42,7 @@ export const Skills = () => {
         <SkillsCard src={Javascript} text="Javascript" />
         <SkillsCard src={Css} text="Css" />
         <SkillsCard src={Html} text="Html" />
+        <SkillsCard src={Nodejs} text="Node.js" />
         <Grid item size={12}>
           <Typography>Backend Development:</Typography>
         </Grid>
@@ -53,7 +54,6 @@ export const Skills = () => {
         <SkillsCard src={PythonLogo} text="Python" />
         <SkillsCard src={Postgre} text="Postgre" />
         <SkillsCard src={SpringBootLogo} text="Spring Boot" />
-        <SkillsCard src={Nodejs} text="Node.js" />
 
         {/* <Skill src={JavaLogo} />
 

@@ -7,7 +7,7 @@ import { DogTown } from "./screens/DogTown.jsx";
 import { Math } from "./screens/Math/Math.jsx";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { D3 } from "./screens/Math/D3.jsx";
-import { ParallaxScreen } from "./screens/ParallexScreen.jsx";
+import { ParallaxScreen } from "./screens/ParallaxScreen.jsx";
 import { GradientHome } from "./otherScreens/gradientHome.jsx";
 import { DraggableList } from "./otherScreens/draggableList.jsx";
 import { SpecialNavBar } from "./components/Navigation/SpecialNavBar";

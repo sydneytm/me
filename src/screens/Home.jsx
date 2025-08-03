@@ -12,26 +12,23 @@ export const Home = () => {
   return (
     <section id="home">
       <Typography
-        variant="h2"
+        variant="h3"
         color="black"
         style={{
           marginTop: "90px",
-          justifyContent: "center",
-          textAlign: "center",
+          fontFamily: ["Gravitas One", "sans-serif"].join(","),
+          fontSize: "100px",
         }}
       >
-        About me
-      </Typography>
-      <Typography variant="h3" color="black" style={{ marginTop: "90px" }}>
-        Hi!
+        Hello !
       </Typography>
       <Typography color="black">
-        I study mathematics and computer science at Northwestern University.
+        I'm Sydney. I study mathematics and computer science at Northwestern
+        University.
       </Typography>
       <div style={{ marginBottom: "120px", justifyContent: "center" }}>
         <Skills />
       </div>
-      {/* <Math /> */}
     </section>
   );
 };

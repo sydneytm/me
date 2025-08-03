@@ -9,7 +9,7 @@ import theme from "../../model/theme/theme";
 import { Link, Element } from "react-scroll";
 export function SpecialNavBar() {
   const navigate = useNavigate();
-  const [activePage, setActivePage] = useState(false); // toggle state
+  const [activePage, setActivePage] = useState(false);
   const { scrollYProgress } = useScroll();
   const boxShadow = useTransform(
     scrollYProgress,
@@ -49,7 +49,7 @@ export function SpecialNavBar() {
         <Stack
           spacing={3}
           direction={"row"}
-          style={{ marginRight: "20px", marginTop: "10px" }}
+          style={{ marginRight: "50px", marginTop: "10px" }}
         >
           <Link to="home" smooth={true} duration={500}>
             <AnimatedButton
@@ -71,15 +71,6 @@ export function SpecialNavBar() {
                 // navigate("/me/d4");
               }}
               text="D4"
-            />
-          </Link>
-
-          <Link to="dogtown" smooth={true} duration={500}>
-            <AnimatedButton
-              func={() => {
-                // navigate("me/dogtown");
-              }}
-              text="Dog Town"
             />
           </Link>
         </Stack>

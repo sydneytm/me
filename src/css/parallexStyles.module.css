@@ -55,3 +55,11 @@
     margin-left: 1.5rem;
   }
 }
+
+h1,
+h2,
+h3 {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
