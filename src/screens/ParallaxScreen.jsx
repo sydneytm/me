@@ -1,10 +1,8 @@
 import * as React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { Header } from "../components/Header";
-// import styles from "../css/parallexStyles.module.css";
 import { D3 } from "./Math/D3";
 import styles from "../css/parallexStyles.module.css";
-// import "./styles.css";
 import { useRef } from "react";
 import Typescript from "../assets/Typescript.svg.png";
 import Sql from "../assets/Sql_data_base_with_logo.png";
@@ -38,7 +36,6 @@ export const ParallaxScreen = () => {
     <>
       <motion.div
         style={{
-          // marginBottom: y,
           color: "black",
           scaleX,
         }}

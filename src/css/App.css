@@ -1,16 +1,8 @@
 #root {
-  /* max-width: 1280px; */
-  /* margin: 0 auto; */
-  /* padding: 1rem; */
   text-decoration-color: aqua;
-  /* color: blue */
-  /* text-align: center; */
   margin-top: 0;
-  /* padding-left: 7%; */
 }
 header {
-  /* color: pink; */
-  /* text-align: center; */
   align-items: center;
   padding-left: 10%;
   margin-top: 0;
@@ -20,31 +12,12 @@ header {
 body {
   background-color: white;
 }
-/* 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
 
 .lexend-deca-thick {
   font-family: "Lexend Deca", sans-serif;
-  /* font-optical-sizing: auto; */
   font-weight: 800;
   font-style: normal;
 }
-
-/* .lexend-deca-<uniquifier> {
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
 
 .archivo-black-regular {
   font-family: "Archivo Black", sans-serif;

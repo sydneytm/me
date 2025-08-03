@@ -27,11 +27,9 @@ function App() {
         <SpecialNavBar />
         <div
           style={{
-            marginTop: "18px",
+            marginTop: "50px",
             paddingLeft: "200px",
             paddingRight: "200px",
-            // justifyContent: "center",
-            // display: "flex",
           }}
         >
           <Routes>

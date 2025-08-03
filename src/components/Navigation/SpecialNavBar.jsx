@@ -33,6 +33,7 @@ export function SpecialNavBar() {
         boxShadow,
         height: "40px",
         alignText: "center",
+        marginBottom: "400px",
       }}
     >
       <ThemeProvider theme={theme}>
@@ -59,12 +60,14 @@ export function SpecialNavBar() {
               text="Home"
             />
           </Link>
-          {/* <AnimatedButton
-            func={() => {
-              navigate("/me/d3");
-            }}
-            text="D3"
-          /> */}
+          <Link to="skills" smooth={true} duration={500}>
+            <AnimatedButton
+              func={() => {
+                // navigate("/me/d4");
+              }}
+              text="Skills"
+            />
+          </Link>
           <Link to="math" smooth={true} duration={500}>
             <AnimatedButton
               func={() => {

@@ -17,17 +17,10 @@ import "../css/Home.css";
 import React from "react";
 import { SkillsCard } from "./Skills/SkillsCard";
 import Nodejs from "../assets/nodejs.webp";
-const Skill = ({ src }) => {
-  return (
-    <Grid item>
-      <img src={src} className="img" />
-    </Grid>
-  );
-};
 
 export const Skills = () => {
   return (
-    <>
+    <div style={{ marginBottom: "120px", justifyContent: "center" }}>
       <Typography variant="h2" marginTop={10} color="black">
         Skills
       </Typography>
@@ -46,22 +39,13 @@ export const Skills = () => {
         <Grid item size={12}>
           <Typography>Backend Development:</Typography>
         </Grid>
-        {/* <SkillsCard src={Postgre} text="Postgre" />
-        <SkillsCard src={SpringBootLogo} text="Spring Boot" /> */}
         <SkillsCard src={CLogo} text="C" />
         <SkillsCard src={CPlusPlusLogo} text="C++" />
         <SkillsCard src={JavaLogo} text="Java" />
         <SkillsCard src={PythonLogo} text="Python" />
         <SkillsCard src={Postgre} text="Postgre" />
         <SkillsCard src={SpringBootLogo} text="Spring Boot" />
-
-        {/* <Skill src={JavaLogo} />
-
-        <Skill src={CLogo} />
-        <Skill src={CPlusPlusLogo} />
-        <Skill src={PythonLogo} />
-        <Skill src={RacketLogo} /> */}
       </Grid>
-    </>
+    </div>
   );
 };
