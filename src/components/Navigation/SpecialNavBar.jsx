@@ -1,0 +1,82 @@
+import { AnimatedButton } from "./AnimatedButton";
+import { Stack, ThemeProvider, Typography } from "@mui/material";
+import { GradientHome } from "../../otherScreens/gradientHome";
+import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import theme from "../../model/theme/theme";
+
+export function SpecialNavBar() {
+  const navigate = useNavigate();
+  const [activePage, setActivePage] = useState(false); // toggle state
+  const { scrollYProgress } = useScroll();
+  const boxShadow = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [`0 2px 4px rgba(0, 0, 0, 0)`, `0 2px 4px rgba(0, 0, 0, 0.8)`]
+  );
+
+  return (
+    <motion.div
+      display="flex"
+      alignItems="flex-start"
+      style={{
+        width: "100%",
+        alignItems: "flex-start",
+        display: "flex",
+        position: "fixed",
+        top: "10px",
+        zIndex: 1000,
+        alignContent: "center",
+        justifyContent: "space-between",
+        boxShadow,
+        height: "40px",
+        alignText: "center",
+      }}
+    >
+      <ThemeProvider theme={theme}>
+        <Typography
+          style={{
+            marginLeft: "30px",
+            zIndex: 1002,
+            color: "black",
+            marginTop: "10px",
+          }}
+        >
+          Sydney TerMolen
+        </Typography>
+        <Stack
+          spacing={3}
+          direction={"row"}
+          style={{ marginRight: "20px", marginTop: "10px" }}
+        >
+          <AnimatedButton
+            func={() => {
+              navigate("/");
+            }}
+            text="Home"
+          />
+          <AnimatedButton
+            func={() => {
+              navigate("/me/d3");
+            }}
+            text="D3"
+          />
+          <AnimatedButton
+            func={() => {
+              navigate("/me/d4");
+            }}
+            text="D4"
+          />
+          <AnimatedButton
+            func={() => {
+              navigate("me/dogtown");
+            }}
+            text="Dog Town"
+          />
+        </Stack>
+      </ThemeProvider>
+    </motion.div>
+  );
+}

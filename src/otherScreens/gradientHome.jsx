@@ -4,7 +4,7 @@ import { useSpring, animated, config } from "@react-spring/web";
 import styles from "../cssModules/gradient.module.css";
 import { motion } from "framer-motion";
 // import {Dr}
-import { AnimatedButton } from "./animatedButton";
+// import { AnimatedButton } from "./animatedButton";
 export const GradientHome = () => {
   const [isHover, setHover] = useState(false);
   const [{ background }] = useSpring(

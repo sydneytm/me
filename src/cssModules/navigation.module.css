@@ -1,0 +1,17 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent[data-isOpen="true"] {
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.child {
+  width: 40px;
+  height: 40px;
+  background: #f107a3;
+  border-radius: 50%;
+}

@@ -1,12 +1,15 @@
 import * as React from "react";
 import "../../css/Math.css";
 import { SquareAnimation } from "../../screens/Math/SquareAnimation.jsx";
-import { Typography, Chip } from "@mui/material";
+import { Typography } from "@mui/material";
 import { ThemeProvider } from "@mui/material";
 import theme from "../../model/theme/theme.jsx";
 export const Math = () => {
   return (
     <ThemeProvider theme={theme}>
+      <Typography variant="h2" color="black" style={{ textAlign: "left" }}>
+        Math
+      </Typography>
       <Typography
         variant="h2"
         color="primary.main"
