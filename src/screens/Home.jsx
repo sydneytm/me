@@ -6,38 +6,32 @@ import { createTheme, ThemeProvider, Typography } from "@mui/material";
 import theme from "../model/theme/theme.jsx";
 import { useSpring, animated, config } from "@react-spring/web";
 import { Math } from "./Math/Math";
-export const Home = () => {
-  // const [{ background }] = useSpring(
-  //   () => ({
-  //     from: { theme: "var(--step0)" },
-  //     to: [
-  //       { background: "var(--step0)" },
-  //       { background: "var(--step1)" },
-  //       { background: "var(--step2)" },
-  //       { background: "var(--step3)" },
-  //       { background: "var(--step4)" },
-  //     ],
-  //     config: config.molasses,
-  //     loop: {
-  //       reverse: true,
-  //     },
-  //   }),
-  //   []
-  // );
+import "../css/Home.css";
 
+export const Home = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Typography variant="h2" color="black" style={{ marginTop: "90px" }}>
+    <section id="home">
+      <Typography
+        variant="h2"
+        color="black"
+        style={{
+          marginTop: "90px",
+          justifyContent: "center",
+          textAlign: "center",
+        }}
+      >
         About me
       </Typography>
-      <Typography color="black">
-        Hi! I'm Sydney, a Mathematics and Computer Science student at
-        Northwestern University
+      <Typography variant="h3" color="black" style={{ marginTop: "90px" }}>
+        Hi!
       </Typography>
-      <div style={{ marginBottom: "120px" }}>
+      <Typography color="black">
+        I study mathematics and computer science at Northwestern University.
+      </Typography>
+      <div style={{ marginBottom: "120px", justifyContent: "center" }}>
         <Skills />
       </div>
-      <Math />
-    </ThemeProvider>
+      {/* <Math /> */}
+    </section>
   );
 };

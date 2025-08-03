@@ -6,7 +6,7 @@ import { UseMath } from "./UseMath";
 import { Grid, Button, Typography, Stack } from "@mui/material";
 import theme from "../../model/theme/theme.jsx";
 import { ThemeProvider } from "@mui/material/styles";
-
+// import {MathButton}
 export const SquareAnimation = () => {
   const {
     square,
@@ -37,7 +37,7 @@ export const SquareAnimation = () => {
         spacing={10}
         justifyContent="center"
         alignItems="center"
-        style={{ marginTop: "20px" }}
+        style={{ marginTop: "20px", marginBottom: "100px" }}
       >
         <Grid
           item
@@ -53,7 +53,7 @@ export const SquareAnimation = () => {
               style={{
                 width: 150,
                 height: 150,
-                background: "#f07167",
+                background: "black",
                 transform,
                 transformStyle: "preserve-3d",
                 cursor: "pointer",
@@ -104,7 +104,7 @@ export const SquareAnimation = () => {
         <Grid item size={7}>
           <Typography
             variant="h3"
-            color="primary.dark"
+            color="black"
             style={{ marginTop: "20px", textAlign: "center" }}
           >
             {whatSquare(square)}
@@ -121,6 +121,7 @@ export const SquareAnimation = () => {
             >
               Horizontal
             </Button>
+
             <Button
               variant="contained"
               color="primary"

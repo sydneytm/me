@@ -14,28 +14,35 @@ import { SpecialNavBar } from "./components/Navigation/SpecialNavBar";
 import { AnimatedButton } from "./components/Navigation/AnimatedButton";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./cssModules/gradient.module.css";
+import { ThemeProvider } from "@emotion/react";
+import theme from "./model/theme/theme";
+import { Index } from "./screens/Index";
 function App() {
   return (
-    <div style={{ alignContent: "center", justifyContent: "center" }}>
+    <ThemeProvider
+      theme={theme}
+      style={{ alignContent: "center", justifyContent: "center" }}
+    >
       <Router>
         <SpecialNavBar />
         <div
           style={{
             marginTop: "18px",
-            padding: "20px",
+            paddingLeft: "200px",
+            paddingRight: "200px",
             // justifyContent: "center",
             // display: "flex",
           }}
         >
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/me/dogtown" element={<DogTown />} />
+            <Route path="/" element={<Index />} />
+            {/* <Route path="/me/dogtown" element={<DogTown />} />
             <Route path="/me/d4" element={<Math />} />
-            <Route path="/me/d3" element={<D3 />} />
+            <Route path="/me/d3" element={<D3 />} /> */}
           </Routes>
         </div>
       </Router>
-    </div>
+    </ThemeProvider>
   );
 }
 

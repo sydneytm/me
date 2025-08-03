@@ -6,18 +6,18 @@ import { ThemeProvider } from "@mui/material";
 import theme from "../../model/theme/theme.jsx";
 export const Math = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Typography variant="h2" color="black" style={{ textAlign: "left" }}>
-        Math
-      </Typography>
+    <section id="math">
       <Typography
         variant="h2"
-        color="primary.main"
-        style={{ textAlign: "center" }}
+        color="black"
+        style={{ textAlign: "left", marginBottom: "20px" }}
       >
+        Math
+      </Typography>
+      <Typography variant="h2" color="black" style={{ textAlign: "center" }}>
         Compute operations of the Dihedral Group of Order 8
       </Typography>
-      <Typography color="primary.main" style={{ marginBottom: "50px" }}>
+      <Typography color="black" style={{ marginBottom: "50px" }}>
         The Dihedral group of order 8 (D4) is a useful group in abstract algebra
         describing the symmetries of a square, with each of its elements
         representing a different transformation of the square. Each element is a
@@ -38,6 +38,6 @@ export const Math = () => {
       {/* <ul>
         <li></li>
       </ul> */}
-    </ThemeProvider>
+    </section>
   );
 };

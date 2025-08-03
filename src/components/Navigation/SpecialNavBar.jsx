@@ -6,7 +6,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import theme from "../../model/theme/theme";
-
+import { Link, Element } from "react-scroll";
 export function SpecialNavBar() {
   const navigate = useNavigate();
   const [activePage, setActivePage] = useState(false); // toggle state
@@ -51,30 +51,37 @@ export function SpecialNavBar() {
           direction={"row"}
           style={{ marginRight: "20px", marginTop: "10px" }}
         >
-          <AnimatedButton
-            func={() => {
-              navigate("/");
-            }}
-            text="Home"
-          />
-          <AnimatedButton
+          <Link to="home" smooth={true} duration={500}>
+            <AnimatedButton
+              func={() => {
+                navigate("/");
+              }}
+              text="Home"
+            />
+          </Link>
+          {/* <AnimatedButton
             func={() => {
               navigate("/me/d3");
             }}
             text="D3"
-          />
-          <AnimatedButton
-            func={() => {
-              navigate("/me/d4");
-            }}
-            text="D4"
-          />
-          <AnimatedButton
-            func={() => {
-              navigate("me/dogtown");
-            }}
-            text="Dog Town"
-          />
+          /> */}
+          <Link to="math" smooth={true} duration={500}>
+            <AnimatedButton
+              func={() => {
+                // navigate("/me/d4");
+              }}
+              text="D4"
+            />
+          </Link>
+
+          <Link to="dogtown" smooth={true} duration={500}>
+            <AnimatedButton
+              func={() => {
+                // navigate("me/dogtown");
+              }}
+              text="Dog Town"
+            />
+          </Link>
         </Stack>
       </ThemeProvider>
     </motion.div>

@@ -7,10 +7,16 @@ import SpringBootLogo from "../assets/spring-boot.png";
 import SvelteLogo from "../assets/svelte.png";
 import CLogo from "../assets/C_Programming_Language.svg";
 import CPlusPlusLogo from "../assets/c++.svg.png";
+import Typescript from "../assets/Typescript.svg.png";
+import Sql from "../assets/Sql_data_base_with_logo.png";
+import Javascript from "../assets/javascript.png";
+import Css from "../assets/css.png";
+import Html from "../assets/html.svg.png";
 import { Grid, Chip, Typography, Divider } from "@mui/material";
 import "../css/Home.css";
 import React from "react";
-
+import { SkillsCard } from "./Skills/SkillsCard";
+import Nodejs from "../assets/nodejs.webp";
 const Skill = ({ src }) => {
   return (
     <Grid item>
@@ -22,22 +28,39 @@ const Skill = ({ src }) => {
 export const Skills = () => {
   return (
     <>
-      <Typography marginTop={10}>Technology and tools I use:</Typography>
+      <Typography variant="h2" marginTop={10} color="black">
+        Skills
+      </Typography>
 
-      <Grid container spacing={2} justifyContent="flex-start">
-        <Skill src={ReactLogo} />
-        <Skill src={SvelteLogo} />
-        <Skill src={Postgre} />
-        <Skill src={SpringBootLogo} />
-        <Divider textAlign="left">content </Divider>
+      <Grid container spacing={2} justifyContent="center">
         <Grid item size={12}>
-          <Typography>Languages:</Typography>
+          <Typography>Frontend Development:</Typography>
         </Grid>
-        <Skill src={JavaLogo} />
+        <SkillsCard src={ReactLogo} text="React" />
+        <SkillsCard src={SvelteLogo} text="Svelte" />
+        <SkillsCard src={Typescript} text="Typescript" />
+        <SkillsCard src={Javascript} text="Javascript" />
+        <SkillsCard src={Css} text="Css" />
+        <SkillsCard src={Html} text="Html" />
+        <Grid item size={12}>
+          <Typography>Backend Development:</Typography>
+        </Grid>
+        {/* <SkillsCard src={Postgre} text="Postgre" />
+        <SkillsCard src={SpringBootLogo} text="Spring Boot" /> */}
+        <SkillsCard src={CLogo} text="C" />
+        <SkillsCard src={CPlusPlusLogo} text="C++" />
+        <SkillsCard src={JavaLogo} text="Java" />
+        <SkillsCard src={PythonLogo} text="Python" />
+        <SkillsCard src={Postgre} text="Postgre" />
+        <SkillsCard src={SpringBootLogo} text="Spring Boot" />
+        <SkillsCard src={Nodejs} text="Node.js" />
+
+        {/* <Skill src={JavaLogo} />
+
         <Skill src={CLogo} />
         <Skill src={CPlusPlusLogo} />
         <Skill src={PythonLogo} />
-        <Skill src={RacketLogo} />
+        <Skill src={RacketLogo} /> */}
       </Grid>
     </>
   );

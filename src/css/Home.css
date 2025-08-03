@@ -4,12 +4,11 @@ h1 {
   top: 0;
   left: 0;
   padding-top: 20px;
-  /* background-color: hotpink; */
   color: white;
 }
 
 .img {
-  height: 3em;
+  height: 5em;
   padding: 1.5em;
 }
 
