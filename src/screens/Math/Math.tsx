@@ -7,29 +7,13 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 export const Math = () => {
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
 
-  // const tran .slateX = useTransform(s)
-
-  // const [activePage, setActivePage] = useState(false);
-  // const { scrollYProgress } = useScroll();
   const translateX = useTransform(
     scrollYProgress,
     [0, 0.8],
     [`translateX(-900px)`, `translateX(0px)`]
   );
 
-  // const ref = useRef(null);
-  // const { scrollYProgress } = useScroll({ target: ref });
-  // const y = useParallax(scrollYProgress, 300);
-
-  // function useParallax(value: MotionValue<number>, distance: number) {
-  //   return useTransform(value, [0, 1], [-distance, distance]);
-  // }
   return (
     <section id="math">
       <motion.div style={{ transform: translateX }}>
