@@ -68,14 +68,14 @@ export function SpecialNavBar() {
               text="Skills"
             />
           </Link>
-          <Link to="math" smooth={true} duration={500}>
+          {/* <Link to="math" smooth={true} duration={500}>
             <AnimatedButton
               func={() => {
                 // navigate("/me/d4");
               }}
               text="D4"
             />
-          </Link>
+          </Link> */}
           <Link to="contact" smooth={true} duration={500}>
             <AnimatedButton
               func={() => {

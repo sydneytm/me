@@ -7,7 +7,7 @@ export const Contact = () => {
   return (
     <>
       {/* <TextField></TextField> */}
-      <Stack direction="row" spacing={3}>
+      <Stack direction="row" spacing={3} marginBottom={"30px"}>
         <p>dog dog dog dog dog dog dog dog dog dog dog dog </p>
         <GitHubIcon
           className="icon"

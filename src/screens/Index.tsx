@@ -21,16 +21,21 @@ export const Index = () => {
         <Skills />
       </Element>
       <Element name="contact">
-        <div style={{ marginTop: "50px", justifyContent: "center" }} />
+        <div
+          style={{
+            marginTop: "50px",
+            justifyContent: "center",
+          }}
+        />
         <p>dfskljf</p>
         <Contact></Contact>
       </Element>
 
-      <Element name="math">
+      {/* <Element name="math">
         <div style={{ marginTop: "50px" }} />
         <p>dfskljf</p>
         <Math />
-      </Element>
+      </Element> */}
 
       {/* <ParallaxScreen /> */}
     </div>
