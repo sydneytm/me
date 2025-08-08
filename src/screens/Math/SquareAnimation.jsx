@@ -1,7 +1,6 @@
 import * as React from "react";
 import "../../css/Home.css";
 import { useSpring, animated } from "@react-spring/web";
-import "../../css/squareAnimation.css";
 import { UseMath } from "./UseMath";
 import { Grid, Button, Typography, Stack } from "@mui/material";
 import theme from "../../model/theme/theme.jsx";

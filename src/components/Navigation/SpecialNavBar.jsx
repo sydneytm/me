@@ -1,6 +1,5 @@
 import { AnimatedButton } from "./AnimatedButton";
 import { Stack, ThemeProvider, Typography } from "@mui/material";
-import { GradientHome } from "../../otherScreens/gradientHome";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
 import { useNavigate } from "react-router-dom";
