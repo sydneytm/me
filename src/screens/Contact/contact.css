@@ -1,7 +1,12 @@
 .icon {
   height: 10em;
+  font-size: 80;
+  color: black;
+  font-size: "large";
 }
 
 .icon:hover {
   cursor: pointer;
+  color: #fc0373;
+  /* font-size: large; */
 }

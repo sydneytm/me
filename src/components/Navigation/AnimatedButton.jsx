@@ -29,7 +29,7 @@ export function AnimatedButton(props) {
       ref={props.ref}
     >
       <ThemeProvider theme={theme}>
-        <Typography style={{ color: isHover ? "hotpink" : "black" }}>
+        <Typography style={{ color: isHover ? "#fc0373" : "black" }}>
           {props.text}{" "}
         </Typography>
       </ThemeProvider>
