@@ -32,6 +32,7 @@ export const Contact = () => {
           sx={{ color: "black" }}
           onClick={() => {
             console.log("Git ");
+            window.location.href = "mailto:your.email@example.com";
           }}
         />
         <p>dog dog dog dog dog dog dog dog dog dog dog dog</p>
