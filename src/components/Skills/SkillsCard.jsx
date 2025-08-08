@@ -6,12 +6,7 @@ import "./skills.css";
 export function SkillsCard(props) {
   const [isOpen, setOpen] = useState(false);
   return (
-    // <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-    <motion.div
-      className="skillCard"
-      whileHover={{ scale: 1.2 }}
-      onClick={{ scale: 2 }}
-    >
+    <motion.div className="skillCard" whileHover={{ scale: 1.2 }}>
       <Grid item>
         <Card style={{ textAlign: "center" }}>
           <img

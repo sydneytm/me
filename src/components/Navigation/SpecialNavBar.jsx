@@ -76,6 +76,14 @@ export function SpecialNavBar() {
               text="D4"
             />
           </Link>
+          <Link to="contact" smooth={true} duration={500}>
+            <AnimatedButton
+              func={() => {
+                // navigate("/me/d4");
+              }}
+              text="Contact"
+            />
+          </Link>
         </Stack>
       </ThemeProvider>
     </motion.div>

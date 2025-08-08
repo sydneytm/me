@@ -22,12 +22,12 @@ export const Skills = () => {
   const { scrollYProgress } = useScroll();
   const translateX = useTransform(
     scrollYProgress,
-    [0, 0.4],
+    [0, 0.3],
     [`translateX(-900px)`, `translateX(0px)`]
   );
   const translateXNeg = useTransform(
     scrollYProgress,
-    [0, 0.4],
+    [0, 0.3],
     [`translateX(1500px)`, `translateX(0px)`]
   );
   return (

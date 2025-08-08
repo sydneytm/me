@@ -6,6 +6,7 @@ import { Home } from "./Home";
 import { Skills } from "../components/Skills";
 import { Element } from "react-scroll";
 import { ParallaxScreen } from "./ParallaxScreen";
+import { Contact } from "./Contact/Contact";
 export const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -19,6 +20,11 @@ export const Index = () => {
         <p>dfskljf</p>
         <Skills />
       </Element>
+      <Element name="contact">
+        <div style={{ marginTop: "50px", justifyContent: "center" }} />
+        <p>dfskljf</p>
+        <Contact></Contact>
+      </Element>
 
       <Element name="math">
         <div style={{ marginTop: "50px" }} />
@@ -26,7 +32,7 @@ export const Index = () => {
         <Math />
       </Element>
 
-      <ParallaxScreen />
+      {/* <ParallaxScreen /> */}
     </div>
   );
 };
