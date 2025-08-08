@@ -6,7 +6,6 @@ import { UseMath } from "./UseMath";
 import { Grid, Button, Typography, Stack } from "@mui/material";
 import theme from "../../model/theme/theme.jsx";
 import { ThemeProvider } from "@mui/material/styles";
-// import {MathButton}
 export const SquareAnimation = () => {
   const {
     square,

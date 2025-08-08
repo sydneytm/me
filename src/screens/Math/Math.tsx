@@ -1,10 +1,7 @@
 import * as React from "react";
-import "../../css/Math.css";
 import { SquareAnimation } from "../../screens/Math/SquareAnimation.jsx";
 import { Typography } from "@mui/material";
-import { useState } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 export const Math = () => {
   const { scrollYProgress } = useScroll();
 
@@ -23,7 +20,6 @@ export const Math = () => {
           style={{
             textAlign: "left",
             marginBottom: "20px",
-            // transform: transform,
           }}
         >
           Math

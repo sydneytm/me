@@ -1,19 +1,15 @@
 #root {
   margin-top: 0;
-  /* padding-left: 7%; */
 }
 header {
   color: pink;
-  /* text-align: center; */
   align-items: center;
   padding-left: 10%;
   margin-top: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: x-large;
 }
-/* body {
-    background-color: pink;
-  } */
+
 .filler {
   height: 6em;
   padding: 1.5em;

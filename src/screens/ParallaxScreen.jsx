@@ -25,7 +25,6 @@ export const ParallaxScreen = () => {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
 
-  // const y = useParallax(scrollYProgress, 300);
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,

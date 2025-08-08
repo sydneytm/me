@@ -11,6 +11,7 @@ const ContactIcon = (props) => {
     <>
       <motion.div whileHover={{ scale: 1.5 }}>
         <props.component
+          fontSize="large"
           className="icon"
           onClick={() => {
             window.location3.href = props.link;
